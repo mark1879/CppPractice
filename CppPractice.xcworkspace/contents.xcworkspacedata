@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:lambda/lambda.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RightValueConference/RightValueConference.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Constructor/Constructor.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Test/Test.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CPP11Practice/CPP11Practice.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ConditionVar/ConditionVar.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ThreadPool/ThreadPool.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BasicKnowledge/BasicKnowledge.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CPPTimer/CPPTimer.xcodeproj">
+   </FileRef>
+</Workspace>
