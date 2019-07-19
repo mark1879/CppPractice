@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:lambda/lambda.xcodeproj">
+      location = "group:StdPractice/StdPractice.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Lambda/Lambda.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:RightValueConference/RightValueConference.xcodeproj">
@@ -12,9 +15,6 @@
    </FileRef>
    <FileRef
       location = "group:Test/Test.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CPP11Practice/CPP11Practice.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ConditionVar/ConditionVar.xcodeproj">
