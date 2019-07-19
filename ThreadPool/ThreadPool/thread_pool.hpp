@@ -16,27 +16,48 @@
 #include <atomic>
 #include "sync_queue.hpp"
 
-using namespace std;
+const int kMaxTaskCount = 100;
 
 class ThreadPool
 {
 public:
     using Task = std::function<void()>;
+    ThreadPool(int thread_num) : queue_(kMaxTaskCount)
+    {
+        if (thread_num <= 0)
+            thread_num = std::thread::hardware_concurrency();
+        
+        Start(thread_num);
+    }
+    
+    ~ThreadPool(void)
+    {
+        Stop();
+    }
+    
+    void Stop()
+    {
+        std::call_once(flag_, [this]{ StopThreadGroup(); });
+    }
+    
+    void AddTask(Task&& task)
+    {
+        queue_.Put(std::forward<Task>(task));
+    }
+    
+    void AddTask(const Task& task)
+    {
+        queue_.Put(task);
+    }
     
 private:
-    void Start(int thread_count)
+    void Start(int numThreads)
     {
-        if (running_)
-        {
-            cout << "warning, thread pool is running!" << endl;
-            return;
-        }
-        
         running_ = true;
         
-        for (int i = 0; i < thread_count; i++)
+        for (int i = 0; i < numThreads; ++i)
         {
-            thread_grop_.push_back(std::make_shared<std::thread>());
+            thread_group_.push_back(std::make_shared<std::thread>(&ThreadPool::RunInThread, this));
         }
     }
     
@@ -44,35 +65,36 @@ private:
     {
         while (running_)
         {
+            //取任务分别执行
             std::list<Task> list;
-            sync_queue_.Take(list);
-
-//            for (auto& task : list)
-//            {
-//                if (!running_)
-//                    return;
-//
-//                task();
-//            }
+            queue_.Take(list);
+            
+            for (auto& task : list)
+            {
+                if (!running_)
+                    return;
+                
+                task();
+            }
         }
     }
     
-//    void StopThreadGroup()
-//    {
-//        sync_queue_.Stop();
-//        running_ = false;
-//
-//        for (auto thread : thread_grop_)
-//        {
-//            if (thread)
-//                thread->join();
-//        }
-//        thread_grop_.clear();
-//    }
+    void StopThreadGroup()
+    {
+        queue_.Stop();
+        running_ = false;
+        
+        for (auto thread : thread_group_)
+        {
+            if (thread)
+                thread->join();
+        }
+        
+        thread_group_.clear();
+    }
     
-private:
-    std::list<std::shared_ptr<std::thread>> thread_grop_;
-    SyncQueue<Task> sync_queue_;
+    std::list<std::shared_ptr<std::thread>> thread_group_;
+    SyncQueue<Task> queue_;
     atomic_bool running_;
     std::once_flag flag_;
 };
