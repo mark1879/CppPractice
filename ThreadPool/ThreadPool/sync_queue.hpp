@@ -70,6 +70,24 @@ public:
         not_empty_.notify_all();
     }
     
+    bool Empty()
+    {
+        std::lock_guard<std::mutex> locker(mutex_);
+        return queue_.empty();
+    }
+    
+    bool Full()
+    {
+        std::lock_guard<std::mutex> locker(mutex_);
+        return queue_.size() == max_size_;
+    }
+    
+    size_t Size()
+    {
+        std::lock_guard<std::mutex> locker(mutex_);
+        return queue_.size();
+    }
+    
 private:
     bool NotFull() const
     {
