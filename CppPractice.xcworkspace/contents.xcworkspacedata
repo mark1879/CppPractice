@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:GoogleTest/GoogleTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BoostPractice/BoostPractice.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:StdPractice/StdPractice.xcodeproj">
    </FileRef>
    <FileRef
