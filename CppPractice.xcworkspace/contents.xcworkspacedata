@@ -2,36 +2,48 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GoogleTest/GoogleTest.xcodeproj">
+      location = "group:SequentialContainers/SequentialContainers.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BoostPractice/BoostPractice.xcodeproj">
+      location = "group:RestSDk/RestSDk.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:StdPractice/StdPractice.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Lambda/Lambda.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:RightValueConference/RightValueConference.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Constructor/Constructor.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Test/Test.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ConditionVar/ConditionVar.xcodeproj">
+      location = "group:Templates/Templates.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ThreadPool/ThreadPool.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BasicKnowledge/BasicKnowledge.xcodeproj">
+      location = "group:Test/Test.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StdPractice/StdPractice.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RightValueConference/RightValueConference.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Lambda/Lambda.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GoogleTest/GoogleTest.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:CPPTimer/CPPTimer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Constructor/Constructor.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ConditionVar/ConditionVar.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BoostPractice/BoostPractice.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BasicKnowledge/BasicKnowledge.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:C++11Practice/C++11Practice.xcodeproj">
    </FileRef>
 </Workspace>

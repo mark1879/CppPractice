@@ -44,6 +44,7 @@ Line::Line(int len)
     *ptr = len;
 }
 
+// 拷贝构造
 Line::Line(const Line &obj)
 {
     cout << "Copy constructor allocating ptr." << endl;
@@ -51,6 +52,7 @@ Line::Line(const Line &obj)
     *ptr = *obj.ptr; // copy the value
 }
 
+// 移动构造
 Line::Line(Line&& obj)
 {
     cout << "Move constructor." << endl;

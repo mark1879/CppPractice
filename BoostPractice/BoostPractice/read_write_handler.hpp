@@ -28,6 +28,7 @@ namespace boost_practice
     public:
         RWHandler(io_service& service) : socket_(service)
         {
+            
         }
         
         ~RWHandler()
@@ -36,9 +37,10 @@ namespace boost_practice
         
         void HandleRead()
         {
+            // 三种情况下会返回: 1. 缓冲区满； 2. transfer_at_least为真（收到特定数量字节即返回）；3. 有错误发生
             async_read(socket_, buffer(buffer_), transfer_at_least(kHeaderLength), [this](const boost::system::error_code& error, size_t size)
            {
-               if (error)
+               if (error.failed())
                {
                    HandleError(error);
                    return;
@@ -50,9 +52,15 @@ namespace boost_practice
            });
         }
         
-        void HandleWrite()
+        void HandleWrite(const char* data, int len)
         {
+            boost::system::error_code error;
             
+            write(socket_, buffer(data, len), error);
+            if (error.failed())
+            {
+                HandleError(error);
+            }
         }
         
         tcp::socket& GetSocket()
