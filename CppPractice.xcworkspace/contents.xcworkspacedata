@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:GenericAlgorithms/GenericAlgorithms.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SequentialContainers/SequentialContainers.xcodeproj">
    </FileRef>
    <FileRef
@@ -42,8 +45,5 @@
    </FileRef>
    <FileRef
       location = "group:BasicKnowledge/BasicKnowledge.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:C++11Practice/C++11Practice.xcodeproj">
    </FileRef>
 </Workspace>
