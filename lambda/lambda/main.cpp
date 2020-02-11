@@ -7,46 +7,21 @@
 //
 
 #include <iostream>
+#include "lambda.hpp"
 
 using namespace std;
 
-class Line
-{
-public:
-    Line(unsigned int length)
-    {
-        length_ = length;
-    }
-    
-    unsigned int GetLength() const
-    {
-        return length_;
-    }
-    
-    void SetLength(unsigned int length)
-    {
-        length_ = length;
-    }
-    
-    void TestLambda()
-    {
-        auto print_value = [this] { cout << "length: " << length_ << endl; };
-        
-        this->length_ = 101;
-        
-        print_value();
-    }
-    
-private:
-    unsigned int length_;
-    
-};
-
 int main(int argc, const char * argv[])
 {
-    Line line(10);
+//        test_capture_by_value();
+//        test_capture_by_reference();
+//
+//        test_mutable();
+//
+//        test_return_type();
     
-    line.TestLambda();
+//    test_generic_type_lambda();
+    test_capture_right_value();
     
     return 0;
 }

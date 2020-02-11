@@ -9,6 +9,7 @@
 #include <iostream>
 #include "generic_algorithms.hpp"
 #include "custom_operations.hpp"
+#include "lambda.hpp"
 
 int main(int argc, const char * argv[])
 {
@@ -25,12 +26,13 @@ int main(int argc, const char * argv[])
 //    test_replace();
 //    test_sort();
     
-    
-    test_custom_sort();
-    test_find_if();
+//    test_custom_sort();
+//    test_find();
+//    test_search();
 //    test_partition();
-    
-//    test_lambda();
+//    test_for_each();
+//    test_transform();
+    test_count_if();
 
     return 0;
 }
