@@ -99,7 +99,9 @@ void test_capture_right_value()
 {
     auto important = make_unique<int>(1);
     
-    auto add = [v1 = 1, v2 = move(important)] (int x, int y) -> int { return v1 + (*v2) + x + y; };
+    auto add = [v1 = 1, &important] (int x, int y) -> int {
+        return v1 + (*important) + x + y;
+    };
     
     cout << add(1, 1) << endl;
 }

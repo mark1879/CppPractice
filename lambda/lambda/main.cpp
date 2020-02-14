@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "lambda.hpp"
+#include "function.hpp"
 
 using namespace std;
 
@@ -21,7 +22,13 @@ int main(int argc, const char * argv[])
 //        test_return_type();
     
 //    test_generic_type_lambda();
-    test_capture_right_value();
+//    test_capture_right_value();
+    
+    
+//    test_function_pointer();
+//    test_std_function();
+    
+    test_std_bind_and_std_placeholder();
     
     return 0;
 }

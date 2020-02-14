@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		4DC1A2F023F2597100397C2B /* lambda.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lambda.hpp; sourceTree = "<group>"; };
+		4DC1A2F923F64BBD00397C2B /* function.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = function.hpp; sourceTree = "<group>"; };
 		4DFE7BC722E1B63700811CB1 /* Lambda */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lambda; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFE7BCA22E1B63700811CB1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +61,7 @@
 			children = (
 				4DC1A2F023F2597100397C2B /* lambda.hpp */,
 				4DFE7BCA22E1B63700811CB1 /* main.cpp */,
+				4DC1A2F923F64BBD00397C2B /* function.hpp */,
 			);
 			path = Lambda;
 			sourceTree = "<group>";

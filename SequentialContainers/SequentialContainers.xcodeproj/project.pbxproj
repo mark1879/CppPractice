@@ -26,6 +26,7 @@
 		4DA5B45623C6CCCE00245AF7 /* SequentialContainers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SequentialContainers; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA5B45923C6CCCE00245AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4DA5B46023C6CD0700245AF7 /* emplace_back.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = emplace_back.hpp; sourceTree = "<group>"; };
+		4DC1A2F123F260F600397C2B /* sequential_container_practice.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sequential_container_practice.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		4DA5B45823C6CCCE00245AF7 /* SequentialContainers */ = {
 			isa = PBXGroup;
 			children = (
+				4DC1A2F123F260F600397C2B /* sequential_container_practice.hpp */,
 				4DA5B45923C6CCCE00245AF7 /* main.cpp */,
 				4DA5B46023C6CD0700245AF7 /* emplace_back.hpp */,
 			);
