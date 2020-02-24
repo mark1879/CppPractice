@@ -28,7 +28,9 @@ int main(int argc, const char * argv[])
 //    test_function_pointer();
 //    test_std_function();
     
-    test_std_bind_and_std_placeholder();
+//    test_std_bind_and_std_placeholder();
+    
+    test_ref();
     
     return 0;
 }

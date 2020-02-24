@@ -9,6 +9,10 @@
 #ifndef function_h
 #define function_h
 #include <iostream>
+#include <functional>
+#include <vector>
+
+using namespace std;
 
 // 函数类型声明
 using func1 = void(int);
@@ -96,6 +100,20 @@ void test_std_bind_and_std_placeholder()
     a = 200;
     
     cout << bindFoo(1) << endl;
+}
+
+ostream &print(ostream &os, const string &str, char c)
+{
+    return os << str << c;
+}
+
+void test_ref()
+{
+    vector<string> vec_str = {"hello", "world", "yes", "oh", "no"};
+    
+    for_each(vec_str.cbegin(), vec_str.cend(), bind(print, ref(cout), std::placeholders::_1, ' '));
+    
+    cout << endl;
 }
 
 
