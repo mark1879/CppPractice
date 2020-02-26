@@ -9,57 +9,43 @@
 #ifndef map_practice_h
 #define map_practice_h
 #include <map>
+#include <unordered_map>
 #include <vector>
 #include <utility>
+#include "line.hpp"
 
 using namespace std;
 
-class Line
-{
-public:
-    Line(int len);             // 简单的构造函数
-    Line(const Line &obj);     // 拷贝构造函数
-    Line(Line&& obj);
-    ~Line();                   // 析构函数
+void test_init_map(){
+    map<string, size_t> word_count1;
+    map<string, size_t> word_count2 = {{"hello", 1}, {"world", 2}, {"everybody", 3}};
     
-private:
-    int *ptr = nullptr;
-};
-
-// 成员函数定义，包括构造函数
-Line::Line(int len)
-{
-    cout << "Normal constructor allocating ptr, len: " << len << endl;
-    // 为指针分配内存
-    ptr = new int;
-    *ptr = len;
-}
-
-// 拷贝构造
-Line::Line(const Line &obj)
-{
-    cout << "Copy constructor allocating ptr, len: " << *obj.ptr << endl;
-    ptr = new int;
-    *ptr = *obj.ptr;    // copy the value
-}
-
-// 移动构造
-Line::Line(Line&& obj)
-{
-    cout << "Move constructor, len: " << *obj.ptr << endl;
-    this->ptr = obj.ptr;
-    obj.ptr = nullptr;
-}
-
-Line::~Line(void)
-{
-    cout << "Freeing memory!" << endl;
+    map<string, size_t> word_count3(word_count2.cbegin(), word_count2.cend());
+    for (const auto &w : word_count3){
+           cout << w.first << " occurs " << w.second << ((w.second > 1) ? " times" : " time") << endl;
+    }
     
-    if (ptr != nullptr){
-        cout << "ptr is not null, len: " << *ptr << endl;
-        delete ptr;
-    } else {
-        cout << "ptr is null" << endl;
+    cout << endl;
+    
+    unordered_map<string, size_t> word_count4(word_count2.cbegin(), word_count2.cend());
+    for (const auto &w : word_count4){
+           cout << w.first << " occurs " << w.second << ((w.second > 1) ? " times" : " time") << endl;
+    }
+    
+    cout << endl;
+
+    multimap<string, size_t> word_count5(word_count2.cbegin(), word_count2.cend());
+    word_count5.insert({"hello", 100});
+    for (const auto &w : word_count5){
+           cout << w.first << " occurs " << w.second << ((w.second > 1) ? " times" : " time") << endl;
+    }
+    
+    cout << endl;
+
+    unordered_multimap<string, size_t> word_count6(word_count2.cbegin(), word_count2.cend());
+    word_count6.insert({"world", 100});
+    for (const auto &w : word_count6){
+        cout << w.first << " occurs " << w.second << ((w.second > 1) ? " times" : " time") << endl;
     }
 }
 
@@ -102,11 +88,6 @@ void test_map_traverse(){
     }
 
     cout << endl;
-}
-
-void test_init_map(){
-    map<string, size_t> word_count1;
-    map<string, size_t> word_count2 = {{"hello", 1}, {"world", 2}};
 }
 
 void test_map_insert(){
@@ -182,8 +163,8 @@ void test_map_emplace(){
     }
 }
 
-void test_map_insert_object(){
-    cout << "test_insert_object: " << endl;
+void test_map_insert_object_1(){
+    cout << "test_insert_object_1: " << endl;
     
     map<string, Line> test_map;
     
@@ -193,13 +174,43 @@ void test_map_insert_object(){
     cout << endl << "<<< size: " << test_map.size() << endl;
 }
 
-void test_map_emplace_object(){
-    cout << endl << endl << "test_emplace_object: " << endl;
+void test_map_emplace_object_1(){
+    cout << endl << endl << "test_emplace_object_1: " << endl;
 
     map<string, Line> test_map;
     
     test_map.emplace("hello", Line(11));
     test_map.emplace("hello", Line(12));
+    
+    cout << endl << "<<< size: " << test_map.size() << endl << endl;
+}
+
+void test_map_insert_object_2(){
+    cout << "test_insert_object_2: " << endl;
+    
+    map<string, Line> test_map;
+    Line line(1);
+    
+    cout << "<<<" << endl;
+    test_map.insert({"hello", line});
+    cout << "<<<" << endl;
+    line.SetLength(2);
+    test_map.insert({"hello", line});
+
+    cout << endl << "<<< size: " << test_map.size() << endl;
+}
+
+void test_map_emplace_object_2(){
+    cout << endl << endl << "test_emplace_object_2: " << endl;
+
+    map<string, Line> test_map;
+    Line line(11);
+    
+    cout << "<<<" << endl;
+    test_map.emplace("hello", line);
+    cout << "<<<" << endl;
+    line.SetLength(12);
+    test_map.emplace("hello", line);
     
     cout << endl << "<<< size: " << test_map.size() << endl << endl;
 }

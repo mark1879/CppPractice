@@ -11,6 +11,28 @@
 #include <iostream>
 #include <set>
 
+
+void test_set_init(){
+    set<string> set_empty;
+    set<string> set_str = {"hello", "world", "hello", "everybody"};
+    
+    set<string> set_str2(set_str.cbegin(), set_str.cend());
+}
+
+void test_set_insert(){
+    set<string> set_str = {"hello", "world", "hello", "everybody"};
+
+    for (const auto &it : set_str){
+        cout << it << endl;
+    }
+    
+    
+    set<int> set_int = {100, 20, 1};
+    for (const auto &it : set_int){
+          cout << it << endl;
+      }
+}
+
 void test_using_set(){
     vector<string> vec_string = {"hello", "world", "hello", "everybody"};
     set<string> set_string = {"world"};

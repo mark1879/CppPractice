@@ -27,6 +27,8 @@
 		4D9809B323FE1F2300277633 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4D9809BA23FE23D400277633 /* map_practice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = map_practice.hpp; sourceTree = "<group>"; };
 		4D9809BB23FE23EE00277633 /* set_practice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = set_practice.hpp; sourceTree = "<group>"; };
+		4DAF227B24061D1100CCBF36 /* line.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = line.hpp; sourceTree = "<group>"; };
+		4DAF227C2406453500CCBF36 /* pair_practice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = pair_practice.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,8 @@
 				4D9809B323FE1F2300277633 /* main.cpp */,
 				4D9809BA23FE23D400277633 /* map_practice.hpp */,
 				4D9809BB23FE23EE00277633 /* set_practice.hpp */,
+				4DAF227B24061D1100CCBF36 /* line.hpp */,
+				4DAF227C2406453500CCBF36 /* pair_practice.hpp */,
 			);
 			path = AssociativeContainers;
 			sourceTree = "<group>";
