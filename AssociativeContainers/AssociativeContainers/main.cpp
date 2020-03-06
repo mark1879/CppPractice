@@ -17,7 +17,11 @@ int main(int argc, const char * argv[]) {
 //
 //    test_map_insert();
 //    test_map_emplace();
-//
+    
+//    test_map_erase();
+    
+    test_map_subscripting();
+    
 //    test_map_insert_object_1();
 //    test_map_emplace_object_1();
 //
@@ -28,8 +32,13 @@ int main(int argc, const char * argv[]) {
     
 //    test_set_init();
 //    test_set_insert();
+//    test_set_emplace();
+//    test_set_traverse();
     
-    test_using_pair();
+//    test_set_erase();
+    
+//    test_using_pair();
+    
 
     return 0;
 }

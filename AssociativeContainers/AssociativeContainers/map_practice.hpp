@@ -109,7 +109,7 @@ void test_map_insert(){
     if (!ret.second){
         ++ret.first->second;
     }
-    
+
     // pair构造函数需要指定数据类型
     ret = word_count.insert(pair<string, size_t>("we", 1));
     if (!ret.second){
@@ -120,6 +120,9 @@ void test_map_insert(){
     if (!ret.second){
         ++ret.first->second;
     }
+    
+    map<string, size_t> word_count2 = {{"hello2", 1}};
+    word_count.insert(word_count2.cbegin(), word_count2.cend());
     
     for (const auto &it : word_count){
         cout << it.first << " occurs " << it.second << (it.second > 0 ? " times" : " time") << endl;
@@ -161,6 +164,38 @@ void test_map_emplace(){
     for (const auto &it : word_count){
        cout << it.first << " occurs " << it.second << (it.second > 0 ? " times" : " time") << endl;
     }
+}
+
+void test_map_erase(){
+    auto print_map = [](const map<string, size_t> &word_count){
+        for (const auto &it : word_count){
+            cout << it.first << "\t";
+        }
+        cout << endl;
+    };
+    
+    map<string, size_t> word_count = {{"hello", 1}, {"world", 2}, {"everybody", 3}, {"yes", 6}, {"we", 4}, {"can", 5}};
+    
+    print_map(word_count);
+    
+    // 返回删除的元素个数
+    auto ret = word_count.erase("can");
+    cout << "ret: " << ret << endl;
+    
+    // 返回被删除元素的下一个位置的元素
+    auto ret1 = word_count.erase(word_count.begin());
+    if (ret1 != word_count.end()){
+        cout << "ret1: " << ret1->first << endl;
+    }
+    
+    print_map(word_count);
+    
+    auto it = word_count.find("world");
+    // 返回 it
+    auto ret3 = word_count.erase(word_count.cbegin(), it);
+    cout << "ret3: " << ret3->first << endl;
+    
+    print_map(word_count);
 }
 
 void test_map_insert_object_1(){
@@ -213,6 +248,27 @@ void test_map_emplace_object_2(){
     test_map.emplace("hello", line);
     
     cout << endl << "<<< size: " << test_map.size() << endl << endl;
+}
+
+void test_map_subscripting(){
+    auto print_map = [](const map<string, size_t> &word_count){
+       for (const auto &it : word_count){
+           cout << it.first << ":" << it.second << "\t";
+       }
+       cout << endl;
+    };
+    
+    map<string, size_t> word_count = {{"hello", 100}};
+    cout << word_count["world"] << endl;
+    
+    print_map(word_count);
+    
+    try{
+        cout << "at 'hello': " <<  word_count.at("hello") << endl;
+        cout << "at 'everybody': " << word_count.at("everybody") << endl;
+    }catch(std::out_of_range){
+        cout << "exception, out_of_range" << endl;
+    }
 }
 
 #endif /* map_practice_h */
