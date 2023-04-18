@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:OperatorOverloading/OperatorOverloading.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Advanced/Advanced.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Const/Const.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Test/Test.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:templates2/templates2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ObjectOriented/ObjectOriented.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Concurrency/Concurrency.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AssociativeContainers/AssociativeContainers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GenericAlgorithms/GenericAlgorithms.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SequentialContainers/SequentialContainers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Templates/Templates.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ThreadPool/ThreadPool.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RightValueConference/RightValueConference.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Lambda/Lambda.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CPPTimer/CPPTimer.xcodeproj">
+   </FileRef>
+</Workspace>
