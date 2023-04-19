@@ -103,6 +103,7 @@ private:
     
     friend Complex operator+(const Complex& cl, const Complex& cr);
     friend std::ostream& operator<<(std::ostream& out, const Complex& src);
+    friend std::istream& operator>>(std::istream& in, Complex& src);
 };
 
 // 编译器优先调用对象的运算符重载函数（成员方法），
@@ -120,8 +121,14 @@ std::ostream& operator<<(std::ostream& out, const Complex& src)
     return out;
 }
 
-int main(int argc, const char * argv[])
+std::istream& operator>>(std::istream& in, Complex& src)
 {
+    in >> src.real_ >> src.image_;
+    return in;
+}
+
+//int main(int argc, const char * argv[])
+//{
 //    Complex c1(1, 1);
 //    Complex c2(2, 2);
     
@@ -151,11 +158,15 @@ int main(int argc, const char * argv[])
 //    c6 += c6;
     
     
-    Complex c7(7, 7);
-    std::cout << c7 << std::endl;
+//    Complex c7(7, 7);
+//    std::cout << c7 << std::endl;
     
-    return 0;
-}
+//    Complex c8(8, 8);
+//    
+//    std::cin >> c8;
+//    
+//    return 0;
+//}
 
 
 #endif /* complex_h */

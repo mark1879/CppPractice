@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "complex.hpp"
+#include "string.hpp"
 
 //
 //int main(int argc, const char * argv[]) {
