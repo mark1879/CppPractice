@@ -11,9 +11,6 @@
       location = "group:Const/Const.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Test/Test.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:templates2/templates2.xcodeproj">
    </FileRef>
    <FileRef

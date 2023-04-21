@@ -11,9 +11,6 @@
 
 class String
 {
-    typedef char*                iterator;
-    typedef const char*          const_iterator;
-    
 public:
     String(const char* p = nullptr)
     {
@@ -108,24 +105,42 @@ public:
         return cstr_;
     }
     
+    class iterator
+    {
+    public:
+        iterator(char* p = nullptr) : p_(p) {}
+        
+        bool operator!=(const iterator& it)
+        {
+            return p_ != it.p_;
+        }
+        
+        void operator++()
+        {
+            ++p_;
+        }
+        
+        void operator++(int)
+        {
+            p_++;
+        }
+        
+        char& operator*()
+        {
+            return *p_;
+        }
+    private:
+        char* p_;
+    };
+    
     iterator begin()
     {
-        return cstr_;
+        return iterator(cstr_);
     }
     
     iterator end()
     {
-        return cstr_ + strlen(cstr_);
-    }
-    
-    const_iterator begin() const
-    {
-        return cstr_;
-    }
-    
-    const_iterator end() const
-    {
-        return cstr_ + strlen(cstr_);
+        return iterator(cstr_ + strlen(cstr_));
     }
     
     friend std::ostream& operator<<(std::ostream& out, const String& str);
@@ -191,14 +206,14 @@ int main()
         std::cout << ch << "\t";
     
     std::cout << std::endl;
-
-    std::cout << (hello == "hello") << std::endl;
-    std::cout << (hello > "hell") << std::endl;
-    std::cout << (hello < "hell") << std::endl;
-    
-    String empty_str;
-    std::cout << *empty_str.begin() << std::endl;
-    std::cout << empty_str[0] << std::endl;
+//
+//    std::cout << (hello == "hello") << std::endl;
+//    std::cout << (hello > "hell") << std::endl;
+//    std::cout << (hello < "hell") << std::endl;
+//
+//    String empty_str;
+//    std::cout << *empty_str.begin() << std::endl;
+//    std::cout << empty_str[0] << std::endl;
     
     return 0;
 }
