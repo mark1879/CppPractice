@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Test/Test.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SmartPointer/SmartPointer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:OperatorOverloading/OperatorOverloading.xcodeproj">
    </FileRef>
    <FileRef

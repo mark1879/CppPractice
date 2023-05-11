@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04F9505329EE3263003A2135 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04F9505229EE3263003A2135 /* main.cpp */; };
+		048DAC632A08598500160A6A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048DAC622A08598500160A6A /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		04F9504D29EE3263003A2135 /* CopyFiles */ = {
+		048DAC5D2A08598500160A6A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,15 +23,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		048DAC5529FE78B700160A6A /* my_vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = my_vector.hpp; sourceTree = "<group>"; };
-		04E976BC29EF8F4200190F9A /* string.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = string.hpp; sourceTree = "<group>"; };
-		04F9504F29EE3263003A2135 /* OperatorOverloading */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OperatorOverloading; sourceTree = BUILT_PRODUCTS_DIR; };
-		04F9505229EE3263003A2135 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		04F9505929EE3CB0003A2135 /* complex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = complex.hpp; sourceTree = "<group>"; };
+		048DAC5F2A08598500160A6A /* SmartPointer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SmartPointer; sourceTree = BUILT_PRODUCTS_DIR; };
+		048DAC622A08598500160A6A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		048DAC692A085EB300160A6A /* smart_pointer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = smart_pointer.hpp; sourceTree = "<group>"; };
+		048DAC7D2A0C592700160A6A /* test_shared_ptr.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test_shared_ptr.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04F9504C29EE3263003A2135 /* Frameworks */ = {
+		048DAC5C2A08598500160A6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,68 +40,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04F9504629EE3263003A2135 = {
+		048DAC562A08598500160A6A = {
 			isa = PBXGroup;
 			children = (
-				04F9505129EE3263003A2135 /* OperatorOverloading */,
-				04F9505029EE3263003A2135 /* Products */,
+				048DAC612A08598500160A6A /* SmartPointer */,
+				048DAC602A08598500160A6A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		04F9505029EE3263003A2135 /* Products */ = {
+		048DAC602A08598500160A6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04F9504F29EE3263003A2135 /* OperatorOverloading */,
+				048DAC5F2A08598500160A6A /* SmartPointer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04F9505129EE3263003A2135 /* OperatorOverloading */ = {
+		048DAC612A08598500160A6A /* SmartPointer */ = {
 			isa = PBXGroup;
 			children = (
-				04F9505229EE3263003A2135 /* main.cpp */,
-				04F9505929EE3CB0003A2135 /* complex.hpp */,
-				04E976BC29EF8F4200190F9A /* string.hpp */,
-				048DAC5529FE78B700160A6A /* my_vector.hpp */,
+				048DAC622A08598500160A6A /* main.cpp */,
+				048DAC692A085EB300160A6A /* smart_pointer.hpp */,
+				048DAC7D2A0C592700160A6A /* test_shared_ptr.hpp */,
 			);
-			path = OperatorOverloading;
+			path = SmartPointer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04F9504E29EE3263003A2135 /* OperatorOverloading */ = {
+		048DAC5E2A08598500160A6A /* SmartPointer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04F9505629EE3263003A2135 /* Build configuration list for PBXNativeTarget "OperatorOverloading" */;
+			buildConfigurationList = 048DAC662A08598500160A6A /* Build configuration list for PBXNativeTarget "SmartPointer" */;
 			buildPhases = (
-				04F9504B29EE3263003A2135 /* Sources */,
-				04F9504C29EE3263003A2135 /* Frameworks */,
-				04F9504D29EE3263003A2135 /* CopyFiles */,
+				048DAC5B2A08598500160A6A /* Sources */,
+				048DAC5C2A08598500160A6A /* Frameworks */,
+				048DAC5D2A08598500160A6A /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OperatorOverloading;
-			productName = OperatorOverloading;
-			productReference = 04F9504F29EE3263003A2135 /* OperatorOverloading */;
+			name = SmartPointer;
+			productName = SmartPointer;
+			productReference = 048DAC5F2A08598500160A6A /* SmartPointer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04F9504729EE3263003A2135 /* Project object */ = {
+		048DAC572A08598500160A6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					04F9504E29EE3263003A2135 = {
+					048DAC5E2A08598500160A6A = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 04F9504A29EE3263003A2135 /* Build configuration list for PBXProject "OperatorOverloading" */;
+			buildConfigurationList = 048DAC5A2A08598500160A6A /* Build configuration list for PBXProject "SmartPointer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,29 +108,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 04F9504629EE3263003A2135;
-			productRefGroup = 04F9505029EE3263003A2135 /* Products */;
+			mainGroup = 048DAC562A08598500160A6A;
+			productRefGroup = 048DAC602A08598500160A6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04F9504E29EE3263003A2135 /* OperatorOverloading */,
+				048DAC5E2A08598500160A6A /* SmartPointer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04F9504B29EE3263003A2135 /* Sources */ = {
+		048DAC5B2A08598500160A6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F9505329EE3263003A2135 /* main.cpp in Sources */,
+				048DAC632A08598500160A6A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		04F9505429EE3263003A2135 /* Debug */ = {
+		048DAC642A08598500160A6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		04F9505529EE3263003A2135 /* Release */ = {
+		048DAC652A08598500160A6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,9 +239,10 @@
 			};
 			name = Release;
 		};
-		04F9505729EE3263003A2135 /* Debug */ = {
+		048DAC672A08598500160A6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K998G3VUET;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -251,9 +250,10 @@
 			};
 			name = Debug;
 		};
-		04F9505829EE3263003A2135 /* Release */ = {
+		048DAC682A08598500160A6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K998G3VUET;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -264,25 +264,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04F9504A29EE3263003A2135 /* Build configuration list for PBXProject "OperatorOverloading" */ = {
+		048DAC5A2A08598500160A6A /* Build configuration list for PBXProject "SmartPointer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04F9505429EE3263003A2135 /* Debug */,
-				04F9505529EE3263003A2135 /* Release */,
+				048DAC642A08598500160A6A /* Debug */,
+				048DAC652A08598500160A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04F9505629EE3263003A2135 /* Build configuration list for PBXNativeTarget "OperatorOverloading" */ = {
+		048DAC662A08598500160A6A /* Build configuration list for PBXNativeTarget "SmartPointer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04F9505729EE3263003A2135 /* Debug */,
-				04F9505829EE3263003A2135 /* Release */,
+				048DAC672A08598500160A6A /* Debug */,
+				048DAC682A08598500160A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 04F9504729EE3263003A2135 /* Project object */;
+	rootObject = 048DAC572A08598500160A6A /* Project object */;
 }

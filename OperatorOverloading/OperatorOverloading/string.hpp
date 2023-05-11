@@ -8,31 +8,46 @@
 #ifndef string_hpp
 #define string_hpp
 #include <iostream>
+#include <vector>
+#include "my_vector.hpp"
+
+using namespace DSA;
 
 class String
 {
 public:
     String(const char* p = nullptr)
     {
+        std::cout << "String(const char* p)" << std::endl;
+        
         AllocateAndFill(p);
     }
     
     ~String()
     {
+        std::cout << "~String()";
+
         if (cstr_ != nullptr)
         {
+            std::cout << ", str: " << cstr_;
             delete[] cstr_;
             cstr_ = nullptr;
         }
+        
+        std::cout << std::endl;
     }
     
     String(const String& src)
     {
+        std::cout << "String(const String& src)" << std::endl;
+
         AllocateAndFill(src.cstr_);
     }
     
     String& operator=(const String& src)
     {
+        std::cout << "operator=(const String& src)" << std::endl;
+
         if (this == &src)
             return *this;
         
@@ -49,12 +64,16 @@ public:
     
     String(String&& src)
     {
+        std::cout << "String(String&& src)" << std::endl;
+
         cstr_ = src.cstr_;
         src.cstr_ = nullptr;
     }
     
     String& operator=(String&& src)
     {
+        std::cout << "operator=(String&& src)" << std::endl;
+
         if (this == &src)
             return *this;
         
@@ -185,27 +204,27 @@ String operator+(const String& lstr, const String& rstr)
 int main()
 {
     
-    String hello = "hello";
-    String world = "world";
-    
-    hello[0] = 'H';
-    std::cout << hello[0] << std::endl;
-    
-    String hello_world = hello + ", " + world;
-    
-    std::cout << hello_world << std::endl;
-    
-    for (auto it = hello_world.begin(); it != hello_world.end(); it++)
-    {
-        std::cout << *it << "\t";
-    }
-    
-    std::cout << std::endl;
-    
-    for (auto ch : hello_world)
-        std::cout << ch << "\t";
-    
-    std::cout << std::endl;
+//    String hello = "hello";
+//    String world = "world";
+//
+//    hello[0] = 'H';
+//    std::cout << hello[0] << std::endl;
+//
+//    String hello_world = hello + ", " + world;
+//
+//    std::cout << hello_world << std::endl;
+//
+//    for (auto it = hello_world.begin(); it != hello_world.end(); it++)
+//    {
+//        std::cout << *it << "\t";
+//    }
+//
+//    std::cout << std::endl;
+//
+//    for (auto ch : hello_world)
+//        std::cout << ch << "\t";
+//
+//    std::cout << std::endl;
 //
 //    std::cout << (hello == "hello") << std::endl;
 //    std::cout << (hello > "hell") << std::endl;
@@ -214,6 +233,37 @@ int main()
 //    String empty_str;
 //    std::cout << *empty_str.begin() << std::endl;
 //    std::cout << empty_str[0] << std::endl;
+    
+//    std::vector<String> vec;
+//    vec.reserve(10);
+//
+//    String str1 = "111";
+//    vec.push_back(str1);
+//
+//    vec.push_back(String("222"));
+    
+//        Vector<String> vec;
+//        String str1 = "111";
+//        vec.push_back(str1);
+//        vec.push_back(str1);
+////        vec.push_back(String("222"));
+//
+//        Vector<String> vec_cpy = vec;
+    
+    
+        Vector<int> vec;
+        for (size_t i = 0; i < 100; i++)
+           vec.push_back(i);
+
+        Vector<int> vec_cpy = vec;
+//        for (size_t i = 0; i < 100; i++)
+//            vec_cpy.pop_back();
+//
+//        Vector<int> vec_move = std::move(vec);
+//        for (size_t i = 0; i < 100; i++)
+//            vec_move.pop_back();
+
+    
     
     return 0;
 }
