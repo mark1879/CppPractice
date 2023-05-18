@@ -132,5 +132,24 @@ private:
     T *ptr_ = nullptr;
 };
 
+void TestClassTemplate()
+{
+    int capacity = 20;
+    
+    Stack<int> stack(capacity);
+    for (int i = 0; i < capacity; i++)
+        stack.Push(i);
+    
+    Stack<int> stack2 = stack;
+    
+    Stack<int> stack3;
+    stack3 = stack2;
+
+    Stack<int> stack4 = std::move(stack3);
+
+    Stack<int> stack5;
+    stack5 = std::move(stack4);
+}
+
 
 #endif /* class_template_h */

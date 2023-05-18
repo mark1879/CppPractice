@@ -15,6 +15,7 @@ bool compare(T a, T b)
     return a > b;
 }
 
+// 函数模版指定类型实例化
 template bool compare<int>(int a, int b);
 template bool compare<double>(double a, double b);
 

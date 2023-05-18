@@ -24,6 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04B264BD2A15AF9A00559852 /* function_overloading.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = function_overloading.hpp; sourceTree = "<group>"; };
+		04B264BE2A15B4D000559852 /* template_func_in_template_class.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = template_func_in_template_class.hpp; sourceTree = "<group>"; };
+		04B264BF2A15B9C600559852 /* class_template_specialization.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = class_template_specialization.hpp; sourceTree = "<group>"; };
+		04B264C02A15C22000559852 /* class_member_specialization.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = class_member_specialization.hpp; sourceTree = "<group>"; };
 		04F6902929A85B1F009E00B1 /* class_template.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = class_template.hpp; sourceTree = "<group>"; };
 		4D57FE7B2972D9A900CB2B33 /* template.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = template.h; sourceTree = "<group>"; };
 		4D57FE7C2972DA6100CB2B33 /* template.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = template.cpp; sourceTree = "<group>"; };
@@ -65,6 +69,10 @@
 				4D57FE7B2972D9A900CB2B33 /* template.h */,
 				4D57FE7C2972DA6100CB2B33 /* template.cpp */,
 				04F6902929A85B1F009E00B1 /* class_template.hpp */,
+				04B264BD2A15AF9A00559852 /* function_overloading.hpp */,
+				04B264BE2A15B4D000559852 /* template_func_in_template_class.hpp */,
+				04B264BF2A15B9C600559852 /* class_template_specialization.hpp */,
+				04B264C02A15C22000559852 /* class_member_specialization.hpp */,
 			);
 			path = templates2;
 			sourceTree = "<group>";
